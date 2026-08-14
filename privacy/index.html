@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpeakRounds Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0 auto; max-width: 720px; padding: 32px 20px 64px; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1c2b2a; background: #fdfcf9; }
+  @media (prefers-color-scheme: dark) { body { color: #e8efee; background: #101817; } a { color: #7fd8c8; } }
+  h1 { font-size: 1.7rem; letter-spacing: -0.5px; }
+  h2 { font-size: 1.15rem; margin-top: 2.2em; }
+  a { color: #0b6e5f; }
+  .meta { color: #6b7c7a; font-size: 0.9rem; }
+  ul { padding-left: 1.2em; }
+</style>
+</head>
+<body>
+<h1>SpeakRounds Privacy Policy</h1>
+<p class="meta">Effective date: 14 August 2026 · Last reviewed: 14 August 2026</p>
+
+<p>SpeakRounds is an independent OET Nursing Speaking practice application. It is not
+affiliated with or endorsed by OET. This policy explains how the SpeakRounds mobile
+application and its practice service process information.</p>
+
+<h2>1. Who operates SpeakRounds</h2>
+<p>The data controller is JoCoding, Inc. (Republic of Korea).</p>
+<p>Privacy questions and requests can be sent to
+<a href="mailto:bill@jocoding.net">bill@jocoding.net</a>.</p>
+
+<h2>2. Information processed</h2>
+<h3>Information stored on the device</h3>
+<p>The app stores the learner's onboarding choices, interface language, feedback
+language, test-planning selections, and limited local practice state. The user can
+remove this information from Profile &amp; settings by choosing <strong>Delete local
+practice data</strong>. Removing the app also removes its local data, subject to
+normal operating system backup behavior.</p>
+
+<h3>Information processed during Live AI practice</h3>
+<p>When the learner starts a Live AI role-play, SpeakRounds processes:</p>
+<ul>
+<li>microphone recordings made during the fictional role-play and targeted retries;</li>
+<li>speech transcripts generated from those recordings;</li>
+<li>the selected fictional scenario and the conversation turns;</li>
+<li>generated AI-patient responses and practice feedback;</li>
+<li>technical metadata such as an anonymous session ID, request ID, audio duration,
+file size, processing status, token or character usage, and latency.</li>
+</ul>
+<p>Learners must not include a real patient's name, contact details, medical record,
+or other real-world patient information. SpeakRounds is an educational simulation,
+not a clinical-record system.</p>
+<p>SpeakRounds currently has no learner accounts and does not request a legal name,
+email address, phone number, contacts, precise location, advertising identifier, or
+payment information in the app.</p>
+
+<h2>3. How the information is used</h2>
+<p>The information is used only to:</p>
+<ul>
+<li>transcribe the learner's practice speech;</li>
+<li>generate a fictional patient response;</li>
+<li>produce qualitative, evidence-linked practice feedback;</li>
+<li>evaluate a targeted retry against the identified communication move;</li>
+<li>secure, rate-limit, troubleshoot, and measure the reliability of the practice
+service.</li>
+</ul>
+<p>SpeakRounds does not use the recordings or transcripts for advertising, cross-app
+tracking, data brokerage, or sale. SpeakRounds does not claim that its practice
+feedback is an official OET result, pass prediction, or clinical advice.</p>
+
+<h2>4. Service providers</h2>
+<p>Live AI practice uses the following processors:</p>
+<ul>
+<li><strong>xAI</strong> receives practice audio for speech-to-text and patient text
+for text-to-speech.</li>
+<li><strong>OpenAI</strong> receives the transcript, fictional scenario context, and
+prior fictional conversation turns to generate the AI patient response and practice
+feedback. SpeakRounds does not send the raw microphone recording to OpenAI.</li>
+<li><strong>Supabase</strong> hosts the encrypted SpeakRounds practice service in
+Seoul, South Korea (AWS ap-northeast-2).</li>
+</ul>
+<p>Provider API data is not used to train provider models by default unless the
+operator explicitly opts in. Under the providers' standard API controls, security or
+abuse-monitoring records may be retained for up to 30 days. Approved
+zero-data-retention controls may reduce this period. The in-app notice and this
+policy will be updated if the active provider controls change.</p>
+<p>Provider policies:</p>
+<ul>
+<li>OpenAI API data controls:
+<a href="https://developers.openai.com/api/docs/guides/your-data">developers.openai.com/api/docs/guides/your-data</a></li>
+<li>xAI security and zero-data-retention information:
+<a href="https://docs.x.ai/developers/faq/security">docs.x.ai/developers/faq/security</a></li>
+</ul>
+
+<h2>5. Retention and deletion</h2>
+<p>SpeakRounds encrypts active server-side session state at rest and automatically
+deletes it 30 minutes after the session was created. This includes the SpeakRounds
+copy of raw audio, transcript, AI-patient turns, report, and targeted retries. Audio
+playback does not extend that deadline. Temporary mobile recording files are removed
+after successful upload or when the flow is disposed; the app also cleans up stale
+temporary files on a later start where supported.</p>
+<p>OpenAI and xAI may separately keep security or abuse-monitoring records for up to
+30 days under their standard API settings, as described above. SpeakRounds cannot use
+the local delete button to shorten a processor's mandatory security retention.</p>
+<p>There is no cloud history or account profile in this beta. If accounts or saved
+history are introduced, this policy and the deletion controls will be updated before
+that feature is enabled.</p>
+
+<h2>6. Legal basis</h2>
+<p>Where the GDPR or UK GDPR applies, Live AI practice is processed at the learner's
+request to provide the practice service. Security and abuse prevention are processed
+for the legitimate interest of protecting the service, providers, and learners.
+Microphone access is requested in context and can be denied; without it, Live AI
+voice practice cannot run, but the illustrative sample remains available.</p>
+
+<h2>7. International transfers</h2>
+<p>The service providers may process information outside the learner's country. The
+operator configures appropriate contractual and transfer safeguards where required.
+The production hosting region is Seoul, South Korea.</p>
+
+<h2>8. Security</h2>
+<p>Production traffic uses HTTPS. Provider credentials remain on the server. Active
+session data is encrypted at rest, bearer-token protected, rate-limited, excluded
+from caches, and deleted on a fixed expiry. Logs are designed to exclude raw audio,
+transcripts, provider keys, and session bearer tokens. No system can guarantee
+absolute security.</p>
+
+<h2>9. Learner choices and rights</h2>
+<p>Users can:</p>
+<ul>
+<li>deny or later revoke microphone permission in device settings;</li>
+<li>delete local practice data in Profile &amp; settings;</li>
+<li>wait for the automatic 30-minute server deletion; and</li>
+<li>contact <a href="mailto:bill@jocoding.net">bill@jocoding.net</a> about access,
+deletion, objection, restriction, or another privacy right that applies in their
+jurisdiction.</li>
+</ul>
+<p>Because the beta has no account, the operator may need a session request ID and
+time window to locate a still-active session and may be unable to identify data after
+the fixed deletion deadline.</p>
+
+<h2>10. Children</h2>
+<p>SpeakRounds is intended for healthcare professionals and adult OET candidates. It
+is not directed to children under 16 and does not knowingly collect their
+information.</p>
+
+<h2>11. Changes</h2>
+<p>Material changes will be shown in the app or on this page with a new effective
+date. This public policy always matches the behavior of the released app and
+production provider settings.</p>
+
+<p class="meta">SpeakRounds · <a href="../support/">Support</a></p>
+</body>
+</html>
