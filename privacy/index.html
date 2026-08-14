@@ -51,7 +51,9 @@ or other real-world patient information. SpeakRounds is an educational simulatio
 not a clinical-record system.</p>
 <p>SpeakRounds currently has no learner accounts and does not request a legal name,
 email address, phone number, contacts, precise location, advertising identifier, or
-payment information in the app.</p>
+card details in the app. SpeakRounds Pro purchases are handled by Apple and
+validated through RevenueCat using an anonymous identifier (see Service
+providers).</p>
 
 <h2>3. How the information is used</h2>
 <p>The information is used only to:</p>
@@ -77,6 +79,11 @@ prior fictional conversation turns to generate the AI patient response and pract
 feedback. SpeakRounds does not send the raw microphone recording to OpenAI.</li>
 <li><strong>Supabase</strong> hosts the encrypted SpeakRounds practice service in
 Seoul, South Korea (AWS ap-northeast-2).</li>
+<li><strong>RevenueCat</strong> manages in-app purchases: it receives an
+anonymous app-generated identifier and App Store purchase receipts to validate
+subscriptions and unlock SpeakRounds Pro. Payment itself is processed by Apple;
+SpeakRounds never sees card details. Purchase records are kept while needed to
+provide the entitlement.</li>
 </ul>
 <p>Provider API data is not used to train provider models by default unless the
 operator explicitly opts in. Under the providers' standard API controls, security or
