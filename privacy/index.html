@@ -17,7 +17,7 @@
 </head>
 <body>
 <h1>SpeakRounds Privacy Policy</h1>
-<p class="meta">Effective date: 14 August 2026 · Last reviewed: 14 August 2026</p>
+<p class="meta">Effective date: 16 September 2026 · Last reviewed: 16 September 2026</p>
 
 <p>SpeakRounds is an independent OET Nursing Speaking practice application. It is not
 affiliated with or endorsed by OET. This policy explains how the SpeakRounds mobile
@@ -50,7 +50,7 @@ file size, processing status, token or character usage, and latency.</li>
 or other real-world patient information. SpeakRounds is an educational simulation,
 not a clinical-record system.</p>
 <p>SpeakRounds currently has no learner accounts and does not request a legal name,
-email address, phone number, contacts, precise location, advertising identifier, or
+email address, phone number, contacts, precise location, or
 card details in the app. SpeakRounds Pro purchases are handled by Apple and
 validated through RevenueCat using an anonymous identifier (see Service
 providers).</p>
@@ -90,27 +90,55 @@ operator explicitly opts in. Under the providers' standard API controls, securit
 abuse-monitoring records may be retained for up to 30 days. Approved
 zero-data-retention controls may reduce this period. The in-app notice and this
 policy will be updated if the active provider controls change.</p>
+<p>Product analytics, reliability, and attribution use these providers:</p>
+<ul>
+<li><strong>PostHog</strong> (US region) receives product-usage events, such as
+screens reached, role-plays started or finished, reports opened, and paywall or
+purchase outcomes. Events use a randomly generated device identifier and may
+include an opaque practice-session ID to diagnose report delivery. Practice audio,
+transcripts, report text, and learner sentences are not sent to PostHog.
+Session replay is disabled.</li>
+<li><strong>Sentry</strong> receives diagnostic information about application
+errors, crashes, and hangs to help us investigate reliability. Screenshots and
+default personal-information collection are disabled.</li>
+<li><strong>Meta</strong> receives app activation and attribution information.
+RevenueCat can share purchase attribution using the Meta SDK's anonymous identifier.
+On iOS, access to the advertising identifier is subject to App Tracking Transparency
+permission. Users can decline or change this permission in device settings.
+Practice recordings, transcripts, and report text are not used for advertising.</li>
+</ul>
 <p>Provider policies:</p>
 <ul>
 <li>OpenAI API data controls:
 <a href="https://developers.openai.com/api/docs/guides/your-data">developers.openai.com/api/docs/guides/your-data</a></li>
 <li>xAI security and zero-data-retention information:
 <a href="https://docs.x.ai/developers/faq/security">docs.x.ai/developers/faq/security</a></li>
+<li><a href="https://posthog.com/privacy">PostHog privacy policy</a></li>
+<li><a href="https://sentry.io/privacy/">Sentry privacy policy</a></li>
+<li><a href="https://www.revenuecat.com/privacy/">RevenueCat privacy policy</a></li>
+<li><a href="https://www.facebook.com/privacy/policy/">Meta privacy policy</a></li>
 </ul>
 
 <h2>5. Retention and deletion</h2>
 <p>SpeakRounds encrypts active server-side session state at rest and automatically
 deletes it 30 minutes after the session was created. This includes the SpeakRounds
-copy of raw audio, transcript, AI-patient turns, report, and targeted retries. Audio
+copy of raw audio, full transcript, AI-patient turns, and targeted retries. Audio
 playback does not extend that deadline. Temporary mobile recording files are removed
 after successful upload or when the flow is disposed; the app also cleans up stale
 temporary files on a later start where supported.</p>
 <p>OpenAI and xAI may separately keep security or abuse-monitoring records for up to
 30 days under their standard API settings, as described above. SpeakRounds cannot use
 the local delete button to shorten a processor's mandatory security retention.</p>
-<p>There is no cloud history or account profile in this beta. If accounts or saved
-history are introduced, this policy and the deletion controls will be updated before
-that feature is enabled.</p>
+<p>For app versions that display the report-recovery notice and obtain consent,
+completed feedback (including short quoted sentences and patient context in the
+report) is separately encrypted and retained for up to 7 days from completion.
+This allows the same installation to retrieve its report after an interruption;
+it does not keep the full conversation or recordings longer. Retrieval requires
+the original session token. Reads do not extend the deadline.</p>
+<p>Saved reports on the device remain until local practice data is deleted.
+Deleting local data does not erase the encrypted server recovery copy; it expires
+automatically, or can be deleted through the authenticated session deletion
+endpoint while the token is available. There is no cross-device cloud account history.</p>
 
 <h2>6. Legal basis</h2>
 <p>Where the GDPR or UK GDPR applies, Live AI practice is processed at the learner's
@@ -136,7 +164,7 @@ absolute security.</p>
 <ul>
 <li>deny or later revoke microphone permission in device settings;</li>
 <li>delete local practice data in Profile &amp; settings;</li>
-<li>wait for the automatic 30-minute server deletion; and</li>
+<li>wait for automatic deletion (30 minutes for sessions; up to 7 days for completed report recovery); and</li>
 <li>contact <a href="mailto:bill@jocoding.net">bill@jocoding.net</a> about access,
 deletion, objection, restriction, or another privacy right that applies in their
 jurisdiction.</li>
